@@ -3,9 +3,9 @@ const categories = [
         id: 'Phones',
         name: 'Smartphones',
         products: [
-            {name: 'íPhone 13', description: '41mm Silver Aluminium Case with White Sport Band'},
-            {name: 'íPhone 14', description: 33499},
-            {name: 'íPhone 12', description: 38999}
+            {name: 'Apple íPhone 13', description: '128GB Midnight'},
+            {name: 'Apple íPhone 14', description: '128GB Deep Purple'},
+            {name: 'Apple íPhone 12', description: '64GB White'}
         ]
     },
     {
@@ -21,9 +21,9 @@ const categories = [
         id: 'Computers',
         name: 'Laptop',
         products: [
-            {name: 'MacBook Air 13"', description: '13" M1 8/256GB 2020 (MGN63) Space Gray'},
-            {name: 'MacBook Pro 16"', description: 'M2 Pro 16/512GB 2023 (MNWC3UA/A) Silver'},
-            {name: 'MacBook Air 15.3"', description: 'M2 8/256GB 2023 (MQKW3UA/A) Midnight'}
+            {name: 'MacBook Air 13"', description: '13" M1 8/256GB 2020 Space Gray'},
+            {name: 'MacBook Pro 16"', description: 'M2 Pro 16/512GB 2023 Silver'},
+            {name: 'MacBook Air 15.3"', description: 'M2 8/256GB 2023 Midnight'}
         ]
         
     }
