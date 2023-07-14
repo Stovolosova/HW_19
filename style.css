@@ -1,0 +1,45 @@
+.categories, .products, #product-info {
+width: 30%;
+padding: 20px;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.categories h2, .products h2, #product-info {
+    margin-bottom: 10px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.buy-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+.buy-button:hover {
+    background-color: #ffc107;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
