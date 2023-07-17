@@ -25,7 +25,6 @@ const categories = [
             {name: 'MacBook Pro 16"', description: 'M2 Pro 16/512GB 2023 Silver'},
             {name: 'MacBook Air 15.3"', description: 'M2 8/256GB 2023 Midnight'}
         ]
-        
     }
 ];
 
@@ -35,6 +34,15 @@ const productsList = document.querySelector('.products ul');
 const productInfo = document.querySelector('#product-info');
 const productNameSpan = document.querySelector('#product-name-span');
 const buyButton = document.querySelector('.buy-button');
+
+const orderForm = document.getElementById('order-form');
+const nameInput = document.getElementById('name');
+const cityInput = document.getElementById('city');
+const warehouseInput = document.getElementById('warehouse');
+const paymentInput = document.getElementById('payment');
+const quantityInput = document.getElementById('quantity');
+const commentInput = document.getElementById('comment');
+
 
 function addToList (el, listEl,  dataAttr) {
     const li = document.createElement('li');
@@ -79,11 +87,54 @@ categoriesList.addEventListener('click', (e) => {
     buyButton.style.display = 'block';
 
   buyButton.addEventListener('click', () => {
-  
-        alert(`the product is ${productName} purchased`);
+    orderForm.style.display = 'block';
 
+    const lastProduct = productsList.lastElementChild.innerText;
+
+    if (lastProduct) {
+        alert(`The product is ${lastProduct} purchased`);
+
+        productsList.removeChild(productsList.lastElementChild);
+    } else {
+        alert(`there are no products available to purchase`);
+    }
         buyButton.style.display = 'none';
         productInfo.style.display = 'none';
+        categoriesEl.style.display = 'none';
         productsList.style.display = 'none';
+
+        document.getElementById('buy-button');
+        buyButton.addEventListener('click', buyProduct);
        }); 
+    });
+
+    function buyProduct () {
+      const name = nameInput.value;
+      const city = cityInput.value;
+      const warehouse = warehouseInput.value;
+      const payment = paymentInput.value;
+      const quantity = quantityInput.value;
+      const comment = commentInput.value;
+
+    if (!name || !city || !warehouse || !payment || !quantity || !comment){
+        alert('Please, fill in all fields');
+        return;
+    } else {
+        const orderInfo = `product: ${productNameSpan.innerText}<br> name: ${name}<br> city: ${city}<br> warehouse: ${warehouse}<br> quantity:${quantity}<br> comment: ${comment}<br>`;
+        const orderInfoDiv = document.createElement('div');
+        orderInfoDiv.innerHTML = orderInfo;
+
+        document.body.appendChild(orderInfoDiv);
+
+        orderForm.style.display = 'none';
+        productInfo.style.display = 'none';
+        buyButton.style.display = 'none';
+    }
+   };
+    orderForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        buyProduct();
+
+        categoriesEl.style.display = 'none';
+        productsList.style.display = 'none';
     });

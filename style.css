@@ -1,5 +1,5 @@
 .categories, .products, #product-info {
-width: 30%;
+width: 50%;
 padding: 20px;
 
 }
@@ -9,8 +9,7 @@ padding: 20px;
     justify-content: space-between;
 }
 
-
-.categories h2, .products h2, #product-info {
+.categories h3, .products h2, #product-info {
     margin-bottom: 10px;
 }
 ul {
@@ -18,26 +17,65 @@ ul {
     padding: 0;
 }
 
-li {
+li, span{
     margin-bottom: 5px;
     cursor: pointer;
+    font-size: large;
+    color: #842da7;
 }
 
 .buy-button {
     margin-top: 10px;
     padding: 10px;
-    background-color: #ffcc00;
-    color: #fff;
+    background-color: #6c1289;
+    color: #f2ebf2;
     border: none;
     cursor: pointer;
     display: none;
+    border-radius: 10px;
 }
 .buy-button:hover {
-    background-color: #ffc107;
+    background-color: #c3106f;
 }
 
 .hidden {
     display: none;
+}
+
+#order-form {
+    display: none;
+    
+}
+form {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    color: #390d80;
+    font-size: 20px;
+}
+
+input, textarea, select {
+    border-radius: 5px;
+    border: 2px solid #7a15ce;
+}
+
+select, #city {
+padding: 3px;
+}
+
+.submit {
+    background-color: plum;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 2px solid purple;
+}
+
+div[orderInfo] {
+    color: mediumpurple;
 }
 
 
